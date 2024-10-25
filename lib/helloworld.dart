@@ -11,29 +11,30 @@ class HelloWorld extends StatelessWidget {
           backgroundColor: Colors.deepPurple,
         ),
         body: Builder(
-            builder: (context) => Padding(
-                padding: EdgeInsets.all(20),
-                child: Center(
-                    child: Column(
-                  children: [
-                    Text('なんか小さくてかわいいやつ'),
-                    Text(
-                      'ちいかわ',
-                      style: TextStyle(
-                          color: Colors.amber[400],
-                          fontWeight: FontWeight.bold,
-                          fontSize: 28),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.all(40),
-                        child: Image.network(
-                            'https://i.pinimg.com/enabled/1200x/81/97/b9/8197b9a19de3b528bcaac5db7caa35ae.jpg')),
-                    ElevatedButton(
-                      child: Text('応援する'),
-                      onPressed: () => OnClick(context),
-                    ),
-                  ],
-                )))),
+            builder: (context) => SingleChildScrollView(
+                child: Padding(
+                    padding: EdgeInsets.all(20),
+                    child: Center(
+                        child: Column(
+                      children: [
+                        Text('なんか小さくてかわいいやつ'),
+                        Text(
+                          'ちいかわ',
+                          style: TextStyle(
+                              color: Colors.amber[400],
+                              fontWeight: FontWeight.bold,
+                              fontSize: 28),
+                        ),
+                        Padding(
+                            padding: EdgeInsets.all(40),
+                            child: Image.network(
+                                'https://i.pinimg.com/enabled/1200x/81/97/b9/8197b9a19de3b528bcaac5db7caa35ae.jpg')),
+                        ElevatedButton(
+                          child: Text('応援する'),
+                          onPressed: () => OnClick(context),
+                        ),
+                      ],
+                    ))))),
       ),
     );
   }
